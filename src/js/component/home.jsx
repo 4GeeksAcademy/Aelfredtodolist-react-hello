@@ -8,7 +8,8 @@ const Home = () => {
 
 	return (
 		<div className="container">
-			<h1>My ToDo List</h1>
+			<h1>My To-Do List</h1>
+			
 			<ul>
 				<li>
 					<input type="text"
@@ -24,9 +25,9 @@ const Home = () => {
 				</li>
 				
 				{todos.map((item, index) => (
-					<li>
+					<li key={index}>
 						{item} {" "}
-						<i className="fa-regular fa-trash-can" 
+						<i className="fa-solid fa-xmark float-end"
 						onClick={() => setTodos(todos.filter(
 							(t, currentIndex) => index != currentIndex)) }></i>
 					</li>
